@@ -7,7 +7,7 @@
 package guru.springframework.sfgpetclinic;
 
 /**
- *<p></p><br>29 gru 2018
+ *<p>Tests</p><br>29 gru 2018
  * @author RS
  *
  */
