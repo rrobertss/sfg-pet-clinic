@@ -90,6 +90,8 @@ public class DataLoader implements CommandLineRunner{
         owner1.setCity("Miami");
         owner1.setTelephone("1231231234");
         
+//        Owner.builder().address("111 Miami Vice").build();
+        
         Pet mikesPet = new Pet();
         mikesPet.setBirthDate(LocalDate.now());
         mikesPet.setPetType(savedDogPetType);
