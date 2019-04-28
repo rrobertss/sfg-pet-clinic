@@ -47,7 +47,13 @@
 		<artifactId>spring-boot-devtools</artifactId>
 		<scope>runtime</scope>
 	</dependency>
-	
+	<!--  
+	<dependency>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+		<optional>true</optional>
+	</dependency> 
+	-->
 	
 	 <!-- webjars -->
     <dependency>
@@ -75,6 +81,22 @@
 	<dependency>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-test</artifactId>
+		<scope>test</scope>
+		<exclusions>
+			<exclusion>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+			</exclusion>
+		</exclusions>
+	</dependency>
+	<dependency>
+		<groupId>org.junit.jupiter</groupId>
+		<artifactId>junit-jupiter-api</artifactId>
+		<scope>test</scope>
+	</dependency>
+	<dependency>
+		<groupId>org.junit.jupiter</groupId>
+		<artifactId>junit-jupiter-engine</artifactId>
 		<scope>test</scope>
 	</dependency>
   </dependencies>
@@ -114,6 +136,16 @@
           </dependency>
         </dependencies>
       </plugin>
+      <plugin>
+		<artifactId>maven-surefire-plugin</artifactId>
+		<dependencies>
+			<dependency>
+				<groupId>org.junit.platform</groupId>
+				<artifactId>junit-platform-surefire-provider</artifactId>
+				<version>${junit-platform-version}</version>
+			</dependency>
+		</dependencies>
+	  </plugin>
   	</plugins>
   </build>
 </project>
